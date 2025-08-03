@@ -1,0 +1,41 @@
+import React from 'react';
+
+interface IconProps {
+    size?: number;
+    className?: string;
+    color?: string;
+}
+
+export const UserIcon: React.FC<IconProps> = ({
+    size = 24,
+    className = '',
+    color = 'currentColor'
+}) => {
+    return (
+        <svg
+            width={size}
+            height={size}
+            viewBox="0 0 33 34"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className={className}
+            role="img"
+            aria-label="User"
+        >
+            <path
+                d="M27.5 29.75V26.9167C27.5 25.4138 26.9205 23.9724 25.8891 22.9097C24.8576 21.847 23.4587 21.25 22 21.25H11C9.54131 21.25 8.14236 21.847 7.11091 22.9097C6.07946 23.9724 5.5 25.4138 5.5 26.9167V29.75"
+                stroke={color}
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <path
+                d="M16.5 15.5833C19.5376 15.5833 22 13.0463 22 9.91667C22 6.78705 19.5376 4.25 16.5 4.25C13.4624 4.25 11 6.78705 11 9.91667C11 13.0463 13.4624 15.5833 16.5 15.5833Z"
+                stroke={color}
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+        </svg>
+    );
+};
