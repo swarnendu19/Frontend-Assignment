@@ -35,7 +35,7 @@ const PDF_CONFIG = {
     primaryColor: '#2563eb', // Blue for headers
     textColor: '#374151',    // Dark gray for text
     labelColor: '#6b7280',   // Medium gray for labels
-} as const;
+};
 
 /**
  * Generates and downloads a PDF document from user details
@@ -86,7 +86,7 @@ export const generatePDF = async (userDetails: UserDetails): Promise<jsPDF> => {
 
         // Add description section if provided
         if (userDetails.description.trim()) {
-            currentY = addDescriptionSection(pdf, userDetails, currentY);
+            addDescriptionSection(pdf, userDetails, currentY);
         }
 
         // Add footer

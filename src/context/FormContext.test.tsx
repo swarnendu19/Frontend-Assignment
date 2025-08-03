@@ -7,7 +7,6 @@ import React from 'react';
 import { render, screen, act } from '@testing-library/react';
 import { vi } from 'vitest';
 import { FormProvider, useFormContext } from './FormContext';
-import { UserDetails, ValidationErrors } from '../types';
 
 /**
  * Test component that uses FormContext to test functionality
