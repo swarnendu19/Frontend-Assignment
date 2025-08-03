@@ -7,9 +7,16 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "type-check": "tsc --noEmit",
     "test": "vitest",
     "test:run": "vitest run",
-    "test:ui": "vitest --ui"
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest run --coverage",
+    "build:analyze": "ANALYZE=true npm run build",
+    "postbuild": "next-sitemap",
+    "clean": "rm -rf .next out",
+    "prepare": "npm run type-check && npm run lint"
   },
   "dependencies": {
     "jspdf": "^3.0.1",
